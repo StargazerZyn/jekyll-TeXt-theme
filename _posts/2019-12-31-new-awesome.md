@@ -1,8 +1,8 @@
 ---
-title: 欢迎
+title: 傅立叶变换的可视化理解
 tags: html
 mathjax: true
-lang:zh-CN
+lang: zh-CN
 ---
 
 呃呃呃呃呃呃呃呃
