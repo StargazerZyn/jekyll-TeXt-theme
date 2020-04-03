@@ -10,6 +10,9 @@ article_header:
 ---
 你好,欢迎来到我的博客。
 
+
+<!--more-->
+
 ## 你好
 
 When $$a \ne 0$$, there are two solutions to $$ax^2 + bx + c = 0$$ and they are
@@ -27,4 +30,4 @@ CONFIG = {
 }
 ```
 
-<!--more-->
+#### 再见
