@@ -1,6 +1,6 @@
 ---
 title: 欢迎
-tags: math
+tags: html
 mathjax: true
 lang:zh-CN
 ---
