@@ -1,7 +1,7 @@
 ---
 title: 你好
 tags: TeXt
-lang:zh
+lang: zh-CN
 article_header:
   type: cover
   image:
