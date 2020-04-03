@@ -1,6 +1,8 @@
 ---
 title: 欢迎
-tags: TeXt
+tags: math
+mathjax: true
+lang:zh-CN
 ---
 
 呃呃呃呃呃呃呃呃
