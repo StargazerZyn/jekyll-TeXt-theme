@@ -1,16 +1,14 @@
 ---
 title: 傅立叶变换的可视化理解
-tags: html
+tags: math
 mathjax: true
 lang: zh-CN
 ---
 
-呃呃呃呃呃呃呃呃
+$ f(x)=\sum _{{n=-\infty}}^{\infty}c_{n}\cdot e^{{i{\tfrac  {2\pi nx}{T}}}}$
 啊啊啊啊啊啊啊啊啊啊啊啊啊啊
 <!--more-->
 
 ---
 
-If you like TeXt, don't forget to give me a star. :star2:
-
-[![Star This Project](https://img.shields.io/github/stars/kitian616/jekyll-TeXt-theme.svg?label=Stars&style=social)](https://github.com/kitian616/jekyll-TeXt-theme/)
+$ f(x)=\sum _{{n=-\infty}}^{\infty}c_{n}\cdot e^{{i{\tfrac  {2\pi nx}{T}}}}$
