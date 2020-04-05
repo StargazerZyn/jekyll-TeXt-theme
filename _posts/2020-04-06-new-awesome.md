@@ -9,6 +9,6 @@ lang: zh-CN
 <!--more-->
 
 
-
+$$\displaystyle f(x)=\sum _{{n=-\infty}}^{\infty}c_{n}\cdot e^{{i{\tfrac  {2\pi nx}{T}}}}$$
 
 
