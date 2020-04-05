@@ -14,5 +14,5 @@ $$x_1 = {-b + \sqrt{b^2-4ac} \over 2a}$$
 $$x_2 = {-b - \sqrt{b^2-4ac} \over 2a} \notag$$
 
 
-啊$$\sin \theta ={\frac{e^{{i\theta }}-e^{{-i\theta }}}{2i}} $$哦
+啊$\sin \theta ={\frac{e^{{i\theta }}-e^{{-i\theta }}}{2i}} $哦
 
