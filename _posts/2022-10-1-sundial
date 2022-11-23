@@ -1,0 +1,241 @@
+---
+title: 日晷test
+tags: math
+mathjax: true
+lang: zh-CN
+---
+
+测试mathjax
+<!--more-->
+# 日晷轨迹计算
+
+* 太阳赤纬为 `α`
+* 日晷地理纬度为 `Φ` 
+* 日晷杆长度为 l, 垂直插在 XOY 平面的原点上
+* 选取 x 轴指向正南方，y 轴指向正东方，z 轴指向天顶
+
+## 极轴直线方程计算
+
+根据以上条件，过日晷杆顶，指向北天极的直线方向向量为
+
+```math
+\vec{P} = (1, 0, -\tan\phi)
+```
+
+因为这条直线经过杆顶，且杆顶坐标为 
+
+``` math
+M = (0, 0, l)
+```
+
+因此直线方程为 
+
+``` math
+\left\{
+	\begin{array}{lr}
+        x = \frac{z - l}{-\tan\phi} \\
+        y = 0
+	\end{array}
+\right.
+```
+
+## 太阳与杆顶连线方程计算
+
+设太阳与杆顶的连线向量为
+
+``` math
+\vec{S} = (a,b,c)
+```
+
+直线方程为
+
+``` math
+\frac{x}{a} = \frac{y}{b} = \frac{z - l}{c}
+```
+
+与极轴直线的夹角为 
+
+``` math
+\beta = 90\degree - \alpha
+```
+
+因此有
+
+``` math
+\cos\beta = \frac{\vec{P}\cdot\vec{S}}{|\vec{P}||\vec{S}|}
+```
+
+因为极轴直线向量为
+
+```math
+\vec{P} = (1, 0, -\tan\phi)
+```
+
+所以有
+
+``` math
+\left\{
+	\begin{array}{lr}
+        \vec{S} = (a,b,c) \\
+        \vec{P} = (1, 0, -\tan\phi) \\
+        \cos\beta = \frac{\vec{P}\cdot\vec{S}}{|\vec{P}||\vec{S}|}
+	\end{array}
+\right.
+```
+
+其中
+
+``` math
+|\vec{P}| = \sqrt{1^2 + 0^2 + (-\tan\phi)^2} = \sqrt{1 + \tan^2\phi}
+```
+
+``` math
+|\vec{S}| = \sqrt{a^2 + b^2 + c^2}
+```
+
+``` math
+\vec{P}\cdot\vec{S} = a\cdot1 + b\cdot0 + c\cdot(-\tan\phi) = a - c\tan\phi
+```
+
+因此过杆顶与太阳连线的锥面方程为
+
+``` math
+\left\{
+	\begin{array}{lr}
+        \cos\beta = \frac{a-c\tan\phi}{ \sqrt{1 + \tan^2\phi} \cdot \sqrt{a^2 + b^2 + c^2}} \\
+        \frac{x}{a} = \frac{y}{b} = \frac{z - l}{c}
+	\end{array}
+\right.
+```
+
+这个锥面与 XOY 平面的交线为
+
+``` math
+\left\{
+	\begin{array}{lr}
+        \cos\beta = \frac{a-c\tan\phi}{ \sqrt{1 + \tan^2\phi} \cdot \sqrt{a^2 + b^2 + c^2}} \\
+        \frac{x}{a} = \frac{y}{b} = \frac{z - l}{c} \\
+        z = 0
+	\end{array}
+\right.
+```
+
+因此
+
+``` math
+\left\{
+	\begin{array}{lr}
+    a = -\frac{cx}{l}\\
+    b = -\frac{cy}{l}
+	\end{array}
+\right.
+```
+
+代入得
+``` math
+\cos\beta = \frac{-\frac{cx}{l} - c\tan\phi}{\sqrt{1 + \tan^2\phi} \cdot \sqrt{(-\frac{cx}{l})^2 + (-\frac{cy}{l})^2 + c^2}}
+```
+
+上下同除以 C 得
+
+``` math
+\cos\beta = \frac{-\frac{x}{l} - \tan\phi}{\sqrt{1 + \tan^2\phi} \cdot \sqrt{(-\frac{x}{l})^2 + (-\frac{y}{l})^2 + 1}}
+```
+
+上下同乘以 l 得
+
+``` math
+\cos\beta = \frac{-x - l\tan\phi}{\sqrt{1 + \tan^2\phi} \cdot \sqrt{x^2 + y^2 + l^2}}
+```
+
+```math
+\cos^2\beta = \frac{(x + l\tan\phi)^2}{(1 + \tan^2\phi)\cdot(x^2 + y^2 + l^2)}
+```
+
+因为
+```math
+\cos^2\beta = \cos^2(90\degree - \alpha) = \sin^2\alpha
+```
+
+所以
+
+```math
+\sin^2\alpha = \frac{(x + l\tan\phi)^2}{(1 + \tan^2\phi)\cdot(x^2 + y^2 + l^2)}
+```
+
+令 
+
+``` math
+j = \sin\alpha \\
+k = \tan\phi
+```
+
+有
+
+``` math
+j^2 = \frac{(x + lk)^2}{(1 + k^2) \cdot (x^2 + y^2 + l^2)}
+```
+
+``` math
+(1+k^2)j^2(x^2 + y^2 + l^2) = (x + lk)^2
+```
+
+``` math
+(1 + k^2)j^2x^2 + (1 + k^2)j^2y^2 + (1 + k^2)j^2l^2 = x^2 + 2xlk + l^2k^2
+```
+
+``` math
+(1 - k^2j^2 - j^2)x^2 +2xlk - (1+k^2)j^2y^2 = (j^2 + k^2j^2 - k^2)l^2
+```
+
+## 曲线分析
+
+因为
+
+``` math
+l > 0
+```
+
+不妨设 
+
+``` math
+l = 1
+```
+
+方程为
+
+``` math
+(1 - k^2j^2 - j^2)x^2 +2xk - (1+k^2)j^2y^2 = j^2 + k^2j^2 - k^2
+```
+
+### 如果太阳位于春分点
+
+则
+
+``` math
+\alpha = 0
+```
+
+因此
+
+``` math
+j = \sin\alpha = 0
+```
+
+此时方程为
+
+``` math
+x^2 + 2xk = -k^2
+```
+
+即 
+
+```
+(x + k)^2 = 0
+```
+
+因此方程为
+
+``` math
+x = k = -\tan\phi
+```
